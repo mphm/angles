@@ -1,0 +1,7 @@
+{
+  "name": "angle",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular-youtube-mb": "~1.0.0"
+  }
+}

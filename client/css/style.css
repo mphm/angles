@@ -1,0 +1,46 @@
+header {
+  height: 50px; 
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+}
+
+.menu-link:hover, .menu-link:focus, .open .menu-link {
+  text-decoration: none;
+  background-color: #eeeeee; }
+
+.menu-link {
+  padding: 15px; }
+
+.menu {
+  cursor: pointer;
+  /* To make menu exactly 50px */
+  line-height: 20px; 
+}
+
+.menu .dropdown-menu {
+  margin-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0; 
+}
+
+.logo-header {
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px; 
+}
+
+.header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: left;
+  background-color: #CCC;
+  margin-bottom: 40px;
+  height: 230px; 
+}

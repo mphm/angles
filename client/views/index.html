@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app="angleApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Angles View -->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="pull-left">
+                <a href="/"><img class="logo-header" src="/images/logo2.png"></a> <!-- BETA -->
+            </div>
+            <div class="pull-right">
+              <div class="dropdown menu">
+                <div class="dropdown-toggle noselect menu-link" data-toggle="dropdown">
+                  MENU
+                  <span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/">HOME</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/contact">CONTACT</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/contact">FAQ</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/contact">LINKS</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h1>Angles</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div ng-controller="mainController">
+            <h1>There are {{angles.length}} angles</h1>
+            <ul>
+              <li ng-repeat="angle in angles">
+                Angle holding: {{angle.name}}
+                <br>
+                Map: {{angle.map}} 
+                <br>
+                Comments: {{angle.comment}}
+                <br>
+                Link: {{angle.link}}
+                <br>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <youtube-video video-url="angle.link"></youtube-video>
+                </div>
+              </li>
+              <form ng-submit="createAngle()">
+                <input type="text" placeholder="Angle holding (e.g. Mid)" ng-model="angleName"></input>
+                <input type="text" placeholder="Angle map" ng-model="angleMap"></input>
+                <textarea placeholder="Angle message" ng-model="angleComment"></textarea>
+                <input type="text" placeholder="Angle link" ng-model="angleLink"></input>
+                <button type="submit">Add</button>
+              </form>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-resource.js"></script>
+
+    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/controllers/main-controller.js"></script>
+
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="bower_components/angular-youtube-mb/dist/angular-youtube-embed.min.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>
